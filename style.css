@@ -1,0 +1,135 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #C7CCDB;
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+    
+}
+.container {
+    background-color:#2A324B;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
+    margin: 0;
+    margin-top: 30px;
+    
+}
+h1 {
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    font-size: 60px;
+}
+
+.game-board {
+    /* background-color:rgba(230, 220, 220, 0.822); */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin-top: 50px;
+   
+}
+.cell {
+    background-color: rgb(118, 123, 145, .4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.cell.x,
+.cell.o {
+    cursor: default;
+}
+
+.cell.x::before,
+.cell.x::after,
+.game-board.x .cell:not(.x):not(.o):hover::before,
+.game-board.x .cell:not(.x):not(.o):hover::after {
+    content: '❀';
+    font-size: 200px;
+    position: absolute;
+    color: #f1c453;
+    padding-bottom: 20px;
+}
+
+.cell.o::before,
+.cell.o::after,
+.game-board.o .cell:not(.x):not(.o):hover::before,
+.game-board.o .cell:not(.x):not(.o):hover::after {
+    content: '☮';
+    font-size: 220px;
+    position: absolute;
+    color: #ff7477;
+    padding-bottom: 35px;
+
+
+}
+
+
+.game-board.x .cell:not(.x):not(.o):hover::before,
+.game-board.x .cell:not(.x):not(.o):hover::after,
+.game-board.o .cell:not(.x):not(.o):hover::before,
+.game-board.o .cell:not(.x):not(.o):hover::after {
+  color: rgb(199, 204, 219, .5);
+}
+
+
+.win-draw-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* display: flex; */
+    background-color:rgb(51, 65, 92, .7);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 70px;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+.text-div {
+    font-family: monospace;
+    /* font-size: 65px; */
+    color: rgb(255, 255, 255);
+    
+}
+.win-draw-modal button {
+    font-size: 3rem;
+    background-color: #f5cc00;
+    border: 1px solid #ffffff;
+    padding: .25em .5em;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    border-radius: 10px;
+    font-family: monospace;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.win-draw-modal button:hover {
+    background-color: #613f75;
+    color: white;
+}
+
+.win-draw-modal.display-modal {
+    display: flex;
+}
+
+
