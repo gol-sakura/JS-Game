@@ -61,9 +61,9 @@ function handleClick(e) {
 
 
 
-function gameFinished(draw) {
-    if (draw) {
-        gameMessage.innerText = 'Draw!';
+function gameFinished(tie) {
+    if (tie) {
+        gameMessage.innerText = 'It was a tie game!';
     } else {
         gameMessage.innerText = `${oTurn ? "Peace" : "Flower"}  is Winner!`;
     }
