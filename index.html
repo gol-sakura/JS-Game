@@ -10,7 +10,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Tic Tac Toe</h1>
+        <div class="head">
+            <h1>Tic Tac Toe</h1>
+            <button class="btn-reset" id="restart-game">Reset</button> 
+        </div> 
         <div class="game-board" id="game-board">
             <div class="cell" game-cell></div>
             <div class="cell" game-cell></div>
@@ -21,11 +24,12 @@
             <div class="cell" game-cell></div>
             <div class="cell" game-cell></div>
             <div class="cell" game-cell></div>
-        </div>    
+        </div>
+          
     </div>
     <div class="win-draw-modal" id="WindrawModal">
         <div class="text-div" text>Hello</div>
-        <button id="reset">Reset Game</button>
+        <button id="reset">Restart Game</button>
     </div>
 </body>
 </html>

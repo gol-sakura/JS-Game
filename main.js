@@ -19,11 +19,13 @@ const message = document.getElementById('WindrawModal');
 
 const gameMessage = document.querySelector('[text]');
 const restartGame = document.getElementById('reset');
+const reset = document.getElementById('restart-game');
 
 
 gameStart();
 
 restartGame.addEventListener('click', gameStart);
+reset.addEventListener('click', gameStart);
 
 function gameStart() {
     oTurn = false;
